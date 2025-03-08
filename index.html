@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sohit Tiwari</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+<div id="header">
+ <div class="container">
+    <nav>
+        <img src="Images/xxxx.jpg" alt="logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-text">
+        <p>UI/UX Designer</p>
+        <h1>Hi, I'm <span>Sohit</span> <br> a AI engineer</h1>
+    </div>
+ </div>   
+</div>   
+<!-------------about-------->
+ <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/qwerty.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-tiltle">About Me</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore architecto quasi porro culpa similique ullam corrupti doloremque tempore corporis ex, pariatur quam delectus reprehenderit veritatis expedita, nemo totam. Labore, accusamus? Enim quisquam officia nesciunt ut consequatur. Vitae soluta necessitatibus ut molestiae dignissimos laborum fugiat laudantium ullam delectus, itaque tempora facilis doloribus cupiditate porro ea temporibus!</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing web app interfaces</li>
+                        <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+                        <li><span>Artificial Intelligence</span><br>AI, RAG, Agents</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2025</span><br>BSc CSit From Godawari College TU</li>
+                        <li><span>2023</span><br>UI/UX training at Godawari college</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ </div>
+ <!---------services--------->
+ <div id="services">
+   <div class="container">
+    <h1 class="sub-tiltle">My Services</h1>
+    <div class="services-list">
+        <div>
+            <h2>UI/UX Design</h2>
+            <p>I have basic UI/UX knowledge and experience using Figma. I am familiar with designing interfaces, prototyping, and applying core principles like layout, typography, and usability to create user-friendly designs.</p>
+            <!-- <a href="#">learn more</a> -->
+        </div>
+        <div>
+            <h2>Web Design</h2>
+            <p>I am a beginner web developer with experience in HTML, CSS, and JavaScript. I am familiar with creating basic web pages, styling elements, and adding interactivity using JavaScript, while learning fundamental web development concepts.</p>
+            <!-- <a href="#">learn more</a> -->
+        </div>
+        <div>
+            <h2>AI</h2>
+            <p>I have knowledge of RAG, LangChain, and AI agents. I am familiar with building AI applications, integrating retrieval-augmented generation techniques, and using LangChain for developing advanced chatbot functionalities and AI agents.</p>
+            <!-- <a href="#">learn more</a> -->
+        </div>
+    </div>
+   </div> 
+ </div>
+ <!-------------Portfolio-------->
+ <div id="portfolio">
+   <div class="container">
+    <h1 class="sub-tiltle">My Work</h1>
+    <div class="work-list">
+        <div class="work">
+         <img src="images/ss.png"> 
+            <div class="layer">
+                <h3>Blockchain voting system</h3>
+                <p>Build UI/UX inrerface of Online Voting System</p>
+                <a href="https://github.com/Preetirajdhami/BlockchainVoting" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/work-2.png">
+            <div class="layer">
+                <h3>Voice assistant using python</h3>
+                <p>Built dynamic voice assistant using python which make life easier!!</p>
+                <a href="https://github.com/MrSOHIT/AI_assistant" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </div>
+   </div> 
+ </div>
+ <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+ </script>
+</body>
+</html>
