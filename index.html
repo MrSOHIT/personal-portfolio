@@ -14,16 +14,16 @@
     <nav>
         <img src="Images/xxxx.jpg" alt="logo">
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Service</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <div class="header-text">
-        <p>UI/UX Designer</p>
-        <h1>Hi, I'm <span>Sohit</span> <br> a AI engineer</h1>
+        <p>Web Designer</p>
+        <h1>Hi, I'm <span>Sohit</span> <br> an AI engineer</h1>
     </div>
  </div>   
 </div>   
@@ -36,7 +36,7 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-tiltle">About Me</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore architecto quasi porro culpa similique ullam corrupti doloremque tempore corporis ex, pariatur quam delectus reprehenderit veritatis expedita, nemo totam. Labore, accusamus? Enim quisquam officia nesciunt ut consequatur. Vitae soluta necessitatibus ut molestiae dignissimos laborum fugiat laudantium ullam delectus, itaque tempora facilis doloribus cupiditate porro ea temporibus!</p>
+                <p>Hi, I'm Sohit Tiwari, an AI engineer with a focus on building interactive chatbots and intelligent systems. I have strong skills in web development (HTML, CSS, JS) and Python, which I use to create dynamic applications. With expertise in LangChain, I design advanced AI agents and conversational systems that enhance user experiences. I'm passionate about integrating cutting-edge AI techniques to solve real-world problems. Let's connect!</p>
 
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -46,7 +46,7 @@
                     <ul>
                         <li><span>UI/UX</span><br>Designing web app interfaces</li>
                         <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
-                        <li><span>Artificial Intelligence</span><br>AI, RAG, Agents</li>
+                        <li><span>Artificial Intelligence</span><br>AI, RAG, AI Agents</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
@@ -107,6 +107,37 @@
     </div>
    </div> 
  </div>
+ <!--------------contact--------->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-tiltle">Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i>tiwarisohit76@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>9824370198</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sohit.tiwari.9235"><i class="fa-brands fa-facebook"></i>
+                    <a href="https://github.com/MrSOHIT"><i class="fa-brands fa-github"></i>
+                    <a href="https://www.instagram.com/soohittiwari/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/sohit-tiwari-4b8704244/"><i class="fa-brands fa-linkedin"></i></a>
+                    </a>
+                </div>
+                <a href="images/Rezume__1_.pdf" download  class="btn btn2" >Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Sohit .All Rights Reserved </p>
+    </div>
+ </div>
  <script>
     var tablinks=document.getElementsByClassName("tab-links");
     var tabcontents=document.getElementsByClassName("tab-contents");
@@ -122,5 +153,21 @@
 
     }
  </script>
+ <!-- <form name="submit-to-google-sheet">
+    <input name="email" type="email" placeholder="Email" required>
+    <button type="submit">Send</button>
+  </form> -->
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzC2IrrEAHfMuyR3s8Bpr1lS-VHzrTt2aN9fmZK69DhmE3tK0Ft2o6CLZYPyC8VmUpH/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
